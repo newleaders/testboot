@@ -1,0 +1,57 @@
+.navbar-inverse {
+  .brand {
+    font-weight: bold !important;
+    color: #FFF;
+  }
+
+  .navbar-inner {
+    border-radius: 0 !important;
+  }
+}
+
+#content {
+  #title {
+    color: #333;
+    padding: .25em .75em .25em 0;
+    overflow: auto;
+    margin: 0 0 1em;
+
+    @include border-radius(5px);
+
+    .actions {
+      margin-top: .5em;
+      float: right;
+
+      form {
+        margin: 0;
+      }
+    }
+
+    h1 {
+      float: left;
+      font-size: 2em;
+      margin: 0;
+    }
+  }
+
+  table {
+    thead {
+      th {
+        background: #EEE;
+        color: #333;
+      }
+    }
+
+    tbody {
+      tr {
+        // background: #EDF3FE;
+
+      }
+      td {
+        .btn-small {
+          padding: 0 .5em 0 .25em;
+        }
+      }
+    }
+  }
+}

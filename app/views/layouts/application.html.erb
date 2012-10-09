@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestBootstrap</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="navbar navbar-inverse" id="header">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Acme Corp</a>
+    <ul class="nav pull-right">
+      <li class="active"><a href="#">johnny5@rocket1234.com</a></li>
+      <li><a href="#">Accounts</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2" id="sidebar">
+
+      <form style="margin: 0 0 .5em">
+        <input type="text" class="search-query" placeholder="Search" style="width:80%">
+      </form>
+
+      <%= render "shared/sidebar" %>
+    </div>
+    <div class="span10" id="content">
+      <%= yield %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

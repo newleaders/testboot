@@ -1,0 +1,32 @@
+<div id="title">
+  <div class="actions">
+    <%= link_to "New Object", "#", class: "btn btn-primary btn-small pull-right" %>
+  </div>
+
+  <h1>My App Rocks</h1>
+</div>
+
+<table class="table table-condensed table-bordered table-hover table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email Address</th>
+      <th>Phone Number</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% 10.times do %>
+    <tr>
+      <td><a href="#">Johnny Rocket</a></td>
+      <td>johhny5@rocket1234.com</td>
+      <td>888-555-1212</td>
+      <td>
+        <%= link_to "#", class: "btn btn-small" do %>
+          Edit
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
