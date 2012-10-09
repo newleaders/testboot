@@ -1,9 +1,12 @@
 <div id="title">
   <div class="actions">
-    <%= link_to "New Object", "#", class: "btn btn-primary btn-small pull-right" %>
+    <%= link_to "New Object", "#", class: "btn btn-primary btn-medium pull-right" %>
+    <%= link_to "Export", "#", class: "btn btn-medium pull-right" %>
+    <form class="pull-right" id="primary-search">
+      <input type="text" class="search-query" placeholder="Search" style="width:80%">
+    </form>
   </div>
-
-  <h1>My App Rocks</h1>
+  <h1>Dashboard</h1>
 </div>
 
 <table class="table table-condensed table-bordered table-hover table-striped">
@@ -16,13 +19,14 @@
     </tr>
   </thead>
   <tbody>
-    <% 10.times do %>
+    <% 20.times do %>
     <tr>
       <td><a href="#">Johnny Rocket</a></td>
       <td>johhny5@rocket1234.com</td>
       <td>888-555-1212</td>
       <td>
         <%= link_to "#", class: "btn btn-small" do %>
+          <i class="icon-edit"></i>
           Edit
         <% end %>
       </td>

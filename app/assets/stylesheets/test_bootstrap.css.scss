@@ -1,12 +1,11 @@
-.navbar-inverse {
+.navbar {
   .brand {
-    font-weight: bold !important;
-    color: #FFF;
+    font-weight: bold;
   }
+}
 
-  .navbar-inner {
-    border-radius: 0 !important;
-  }
+#sidebar {
+  margin-top: 4.2em;
 }
 
 #content {
@@ -21,6 +20,10 @@
     .actions {
       margin-top: .5em;
       float: right;
+
+      .btn {
+        margin: 0 0 0 1em;
+      }
 
       form {
         margin: 0;
@@ -43,15 +46,24 @@
     }
 
     tbody {
-      tr {
-        // background: #EDF3FE;
-
-      }
-      td {
-        .btn-small {
-          padding: 0 .5em 0 .25em;
+      tr:hover {
+        td {
+          background-color: #FCF4DD !important;
         }
       }
+
+      td {
+        .btn-small {
+          padding: .15em .75em .15em .5em;
+        }
+      }
+    }
+  }
+
+  nav.pagination {
+    a {
+      margin: 0;
+      padding: 0;
     }
   }
 }
