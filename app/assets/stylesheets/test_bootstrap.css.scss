@@ -9,6 +9,47 @@
 }
 
 #content {
+  .content-panel {
+    border: 1px solid #ccc;
+    @include border-radius(5px);
+
+    #metrics {
+      padding: 1em;
+      margin: 0 0 1em 0;
+      overflow: auto;
+
+      .metric {
+        padding: 1em;
+        border: 1px solid #ccc;
+        text-align: center;
+        @include border-radius(5px);
+
+        p {
+          &.lead {
+            margin-bottom: .25em;
+          }
+          &.label {
+            margin-bottom: 0;
+            line-height: 2em;
+          }
+
+        }
+      }
+    }
+
+    .nav-tabs {
+      li:first-child {
+        margin-left: 1em;
+      }
+    }
+
+    .tab-content {
+      .tab-pane {
+        padding: 0 1em;
+      }
+    }
+  }
+
   .form-panel {
     border: 1px solid #ccc;
     @include border-radius(5px);
@@ -27,7 +68,7 @@
 
     .form-actions {
       margin-bottom: 0;
-      border-radius: 0 0 5px 5px;
+      @include border-radius(0 0 5px 5px);
     }
   }
 
@@ -83,7 +124,7 @@
   }
 
   nav.pagination {
-    margin: 2em 0 0 0;
+    margin: 2em 0;
     text-align: center;
   }
 }

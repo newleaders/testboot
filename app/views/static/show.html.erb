@@ -1,0 +1,148 @@
+<div id="title">
+  <div class="actions">
+    <%= link_to "Edit Account", "#", class: "btn btn-medium pull-right" %>
+  </div>
+  <h1>Account: Acme Corp</h1>
+</div>
+
+<div class="content-panel">
+
+  <div id="metrics">
+    <div class="metric span3">
+      <p class="lead">Balance</p>
+      <p class="label label-warning">$100.00</p>
+    </div>
+    <div class="metric span3">
+      <p class="lead">Velocity</p>
+      <p class="label label-info">Medium</p>
+    </div>
+    <div class="metric span3">
+      <p class="lead">Reputation</p>
+      <p class="label label-success">Good Standing</p>
+    </div>
+    <div class="metric span3">
+      <p class="lead">Focus</p>
+      <p class="label label-info">Growth</p>
+    </div>
+  </div>
+
+  <div style="clear: both;"></div>
+
+  <div class="tabbable"> <!-- Only required for left/right tabs -->
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#tab1" data-toggle="tab">Users</a></li>
+      <li><a href="#tab2" data-toggle="tab">Files</a></li>
+      <li><a href="#tab3" data-toggle="tab">Invoices</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab1">
+        <div class="">
+          <%= select_tag :filter, options_for_select(%w(Active Inactive)), class: "pull-left" %>
+          <form class="pull-left" style="margin-left: 1em;">
+            <input type="text" class="search-query" placeholder="Search" style="width:80%">
+          </form>
+          <%= link_to "New User", "#", class: "btn btn-primary pull-right" %>
+        </div>
+
+        <table class="table table-condensed table-bordered table-hover table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email Address</th>
+              <th>Phone Number</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% 10.times do %>
+            <tr>
+              <td><a href="#">Johnny Rocket</a></td>
+              <td>johhny5@rocket1234.com</td>
+              <td>888-555-1212</td>
+              <td>
+                <%= link_to "#", class: "btn btn-small" do %>
+                  <i class="icon-edit"></i>
+                  Edit
+                <% end %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <%= paginate @paginated_items %>
+      </div>
+      <div class="tab-pane" id="tab2">
+        <div class="">
+          <form class="pull-left">
+            <input type="text" class="search-query" placeholder="Search" style="width:80%">
+          </form>
+          <%= link_to "New File", "#", class: "btn btn-primary pull-right" %>
+        </div>
+
+        <table class="table table-condensed table-bordered table-hover table-striped clearfix">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Size</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% 10.times do %>
+            <tr>
+              <td><a href="#">Sample Report</a></td>
+              <td>PDF</td>
+              <td>2.4MB</td>
+              <td>
+                <%= link_to "#", class: "btn btn-danger btn-small" do %>
+                  <i class="icon-remove"></i>
+                  Delete
+                <% end %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <%= paginate @paginated_items %>
+      </div>
+      <div class="tab-pane" id="tab3">
+        <div class="">
+          <%= link_to "New Invoice", "#", class: "btn btn-primary pull-right" %>
+          <div style="clear: both;"></div><br />
+        </div>
+
+        <table class="table table-condensed table-bordered table-hover table-striped">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% 10.times do %>
+            <tr>
+              <td><a href="#">October 1, 2012</a></td>
+              <td>$100.00</td>
+              <td>
+                <%= link_to "#", class: "btn btn-small btn-success" do %>
+                  <i class="icon-download"></i>
+                  Download
+                <% end %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <%= paginate @paginated_items %>
+      </div>
+    </div>
+  </div>
+
+  <div style="clear: both;"></div>
+
+</div>
