@@ -9,6 +9,28 @@
 }
 
 #content {
+  .form-panel {
+    border: 1px solid #ccc;
+    @include border-radius(5px);
+
+    form {
+      margin: 2em 0 0 0;
+
+      input {
+        width: 90%;
+      }
+
+      textarea {
+        width: 95%;
+      }
+    }
+
+    .form-actions {
+      margin-bottom: 0;
+      border-radius: 0 0 5px 5px;
+    }
+  }
+
   #title {
     color: #333;
     padding: .25em .75em .25em 0;
